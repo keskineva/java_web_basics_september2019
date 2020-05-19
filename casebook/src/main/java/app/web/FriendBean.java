@@ -1,8 +1,6 @@
 package app.web;
 
-import app.domain.models.service.UserServiceModel;
 import app.domain.models.view.FriendsViewModel;
-import app.domain.models.view.HomeViewModel;
 import app.service.UserService;
 import org.modelmapper.ModelMapper;
 
@@ -17,7 +15,7 @@ import java.util.stream.Collectors;
 
 @Named
 @RequestScoped
-public class FriendBean extends BaseBean{
+public class FriendBean extends BaseBean {
 
     private List<FriendsViewModel> friends;
 
@@ -44,7 +42,7 @@ public class FriendBean extends BaseBean{
                 .collect(Collectors.toList()));
     }
 
-    public void unfriend(String unfId){
+    public void unfriend(String unfId) {
         String id = (String) ((HttpSession) FacesContext.getCurrentInstance()
                 .getExternalContext().getSession(false)).getAttribute("userId");
 

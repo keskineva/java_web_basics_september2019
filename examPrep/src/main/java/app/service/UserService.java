@@ -9,9 +9,9 @@ public interface UserService {
 
     void register(UserServiceModel user);
 
-    void addFriend(UserServiceModel userServiceModel);
+    void addUser(UserServiceModel userServiceModel);
 
-    void remove(String userId, String friendId);
+    void remove(String userId, String heroId);
 
     UserServiceModel getById(String id);
 

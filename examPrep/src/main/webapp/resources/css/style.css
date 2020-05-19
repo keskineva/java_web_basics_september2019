@@ -1,19 +1,32 @@
-.bg-casebook {
-	background-color: #F08080;
-}
-
-.text-casebook {
-	color: #F08080;
-}
-
 .w-15 {
-	width: 15%;
+    width: 15%;
 }
 
-.footer {
-	background-color: #F08080;
+.bg-gray {
+    background-color: #e9ecef;
 }
 
-hr {
-	height: 2px;
+body {
+    background-image: url(./img/arena.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+textarea {
+    resize: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.img-thumb {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
 }

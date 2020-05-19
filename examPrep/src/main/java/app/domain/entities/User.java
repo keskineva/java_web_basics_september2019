@@ -9,8 +9,9 @@ public class User extends BaseEntity {
 
     private String username;
     private String password;
-    private String gender;
-    private List<User> friends;
+    private String email;
+    private String country;
+
 
     public User() {
     }
@@ -33,24 +34,22 @@ public class User extends BaseEntity {
         this.password = password;
     }
 
-    @Column(name = "gender", nullable = false)
-    public String getGender() {
-        return gender;
+    @Column(name = "email", nullable = false)
+    public String getEmail() {
+        return email;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    @ManyToMany(targetEntity = User.class)
-    @JoinTable(name = "users_friends",
-            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "friend_id", referencedColumnName = "id"))
-    public List<User> getFriends() {
-        return friends;
+    @Column(name = "country", nullable = false)
+    public String getCountry() {
+        return country;
     }
 
-    public void setFriends(List<User> friends) {
-        this.friends = friends;
+    public void setCountry(String country) {
+        this.country = country;
     }
+
 }

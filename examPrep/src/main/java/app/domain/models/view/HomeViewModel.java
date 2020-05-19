@@ -4,7 +4,9 @@ public class HomeViewModel {
 
     private String id;
     private String username;
-    private String gender;
+    private String email;
+    private String country;
+
 
     public HomeViewModel() {
     }
@@ -25,11 +27,19 @@ public class HomeViewModel {
         this.username = username;
     }
 
-    public String getGender() {
-        return gender;
+    public String getEmail() {
+        return email;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 }

@@ -8,30 +8,44 @@
 <h:body>
     <ui:include src="templates/user-navbar.xhtml"/>
     <main>
-        <hr class="my-2"/>
-        <div class="text-center mt-3">
-            <h:link outcome="profile?id=#{session.getAttribute('userId')}" class="h4 text-info"
-                    value="Welcome, #{session.getAttribute('username')}"/>
-        </div>
-        <hr class="my-4"/>
-        <div class="container">
-            <ui:repeat value="#{homeBean.models}" var="model" varStatus="status">
-                <h:outputText value="&lt;div class=&quot;row mb-4 d-flex justify-content-around&quot;&gt;"
-                              escape="false" rendered="#{status.index % 4 == 0}"/>
-                <div class="col-md-2 d-flex flex-column text-center">
-                    <h:graphicImage library="img" name="#{model.gender}.png" class="img-thumbnail" width="200"
-                                    height="200"/>
-                    <h5 class="text-center">#{model.username}</h5>
-                    <h:form>
-                        <h:commandLink action="#{homeBean.addFriend(model.id)}" class="btn btn-info"
-                                       value="Add Friend"/>
-                    </h:form>
-                </div>
-                <h:outputText value="&lt;/div&gt;" escape="false" rendered="#{status.index % 4 == 3}"/>
-            </ui:repeat>
+        <div class="text-center mb-3">
+            <h4 class="text-white mt-2">Welcome to the arena, #{loginBean.model.username}}</h4>
         </div>
         <hr class="my-3"/>
+        <div class="container">
+            <div class="row mb-4 d-flex justify-content-around">
+                <div class="col-md-3 d-flex flex-column text-center mb-3">
+                    <h:graphicImage library="img" name="#{model.}.png" class="img-thumbnail" width="200"
+                                    height="200"/>
+                    <h:graphicImage name="hreoImage.jpg" class="img-thumb" width="300" height="300"/>
+                    <h5 class="text-white text-center">Warrior</h5>
+                    <a class="btn btn-info mb-2">Details</a>
+                    <a class="btn btn-danger">Delete</a>
+                </div>
+                <div class="col-md-3 d-flex flex-column text-center mb-3">
+                    <h:graphicImage name="hreoImage.jpg" class="img-thumb" width="300" height="300"/>
+                    <h5 class="text-white text-center">Rogue</h5>
+                    <a class="btn btn-info mb-2">Details</a>
+                    <a class="btn btn-danger">Delete</a>
+                </div>
+                <div class="col-md-3 d-flex flex-column text-center mb-3">
+                    <h:graphicImage name="hreoImage.jpg" class="img-thumb" width="300" height="300"/>
+                    <h5 class="text-white text-center">Mage</h5>
+                    <a class="btn btn-info mb-2">Details</a>
+                    <a class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+            <div class="row mb-4 d-flex justify-content-around">
+                <div class="col-md-3 d-flex flex-column text-center mb-3">
+                    <h:graphicImage name="hreoImage.jpg" class="img-thumb" width="300" height="300"/>
+                    <h5 class="text-white text-center">Warrior</h5>
+                    <a class="btn btn-info mb-2">Details</a>
+                    <a class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
     </main>
     <ui:include src="templates/footer.xhtml"/>
 </h:body>
 </html>
+

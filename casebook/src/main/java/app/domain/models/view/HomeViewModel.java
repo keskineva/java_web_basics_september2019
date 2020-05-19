@@ -1,11 +1,12 @@
 package app.domain.models.view;
 
-public class FriendsViewModel {
+public class HomeViewModel {
 
     private String id;
     private String username;
+    private String gender;
 
-    public FriendsViewModel() {
+    public HomeViewModel() {
     }
 
     public String getId() {
@@ -22,5 +23,13 @@ public class FriendsViewModel {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }

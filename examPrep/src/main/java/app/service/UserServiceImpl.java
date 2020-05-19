@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void addFriend(UserServiceModel userServiceModel) {
+    public void addUser(UserServiceModel userServiceModel) {
         this.userRepository.update(this.modelMapper.map(userServiceModel, User.class));
     }
 
@@ -51,12 +51,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void remove(String userId, String friendId) {
+    public void remove(String userId, String heroId) {
         User user1 = this.userRepository.findById(userId);
-        User user2 = this.userRepository.findById(friendId);
+        User user2 = this.userRepository.findById(heroId);
+/*
 
-        user1.getFriends().remove(user2);
-        user2.getFriends().remove(user1);
+        user1.getHeros().remove(user2);
+        user2.getHeroes().remove(user1);
+*/
 
         this.userRepository.update(user1);
         this.userRepository.update(user2);

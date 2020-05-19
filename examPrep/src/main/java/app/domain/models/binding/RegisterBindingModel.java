@@ -3,9 +3,10 @@ package app.domain.models.binding;
 public class RegisterBindingModel {
 
     private String username;
+    private String email;
     private String password;
     private String confirmPassword;
-    private String gender;
+    private String country;
 
     public RegisterBindingModel() {
     }
@@ -16,6 +17,14 @@ public class RegisterBindingModel {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -34,11 +43,12 @@ public class RegisterBindingModel {
         this.confirmPassword = confirmPassword;
     }
 
-    public String getGender() {
-        return gender;
+
+    public String getCountry() {
+        return country;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setCountry(String country) {
+        this.country = country;
     }
 }

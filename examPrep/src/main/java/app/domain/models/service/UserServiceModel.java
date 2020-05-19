@@ -9,8 +9,8 @@ public class UserServiceModel {
     private String id;
     private String username;
     private String password;
-    private String gender;
-    private List<UserServiceModel> friends;
+    private String email;
+    private String country;
 
     public UserServiceModel() {
     }
@@ -39,19 +39,19 @@ public class UserServiceModel {
         this.password = password;
     }
 
-    public String getGender() {
-        return gender;
+    public String getEmail() {
+        return email;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public List<UserServiceModel> getFriends() {
-        return friends;
+    public String getCountry() {
+        return country;
     }
 
-    public void setFriends(List<UserServiceModel> friends) {
-        this.friends = friends;
+    public void setCountry(String country) {
+        this.country = country;
     }
 }
