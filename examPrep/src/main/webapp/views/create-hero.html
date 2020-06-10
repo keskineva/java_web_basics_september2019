@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Heroes</title>
+    <link rel="stylesheet" href="../resources/css/reset-css.css">
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a href="/home" class="navbar-brand text-white h4">Heroes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+            <ul class="navbar-nav row w-25">
+                <li class="nav-item col-md-4">
+                    <a class="nav-link text-white active h5" href="/home">Home</a>
+                </li>
+                <li class="nav-item col-md-4">
+                    <a class="nav-link text-white  active h5" href="/heroes/create">Create Hero</a>
+                </li>
+                <li class="nav-item col-md-4">
+                    <form>
+                        <a class="nav-link text-white active h5" href="/logout">Logout</a>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <h1 class="text-center mt-2">Create Hero</h1>
+    <hr class="hr-3"/>
+    <form class="mx-auto w-15">
+        <div class="form-group">
+            <div class="text-white label-holder d-flex justify-content-center">
+                <label for="heroName" class="h4 mb-2">Hero Name</label>
+            </div>
+            <input type="text" class="form-control" id="heroName" name="heroName"/>
+        </div>
+        <div class="form-group">
+            <div class="text-white label-holder d-flex justify-content-center">
+                <label for="heroClass" class="h4 mb-2">Hero Class</label>
+            </div>
+            <select style="margin-left: 30%; width: 100px;" id="heroClass">
+                <option value="warrior" itemLabel="Warrior"></option>
+                <option value="archer" itemLabel="Archer"></option>
+                <option value="mage" itemLabel="Mage"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="text-white label-holder d-flex justify-content-center">
+                <label for="level" class="h4 mb-2">Level</label>
+            </div>
+           <input type="number" class="form-control" id="level" name="level"/>
+        </div>
+        <div class="button-holder d-flex justify-content-center">
+            <button class="btn btn-info text-white mb-3" type="submit">
+                Create Hero
+            </button>
+        </div>
+    </form>
+</main>
+<footer class="footer bg-dark  py-2">
+    <div class="container-fluid text-center">
+        <div class="footer-background h5 text-white">
+            &#169; CopyRight Victorious Arena. All rights reserved.
+        </div>
+    </div>
+</footer>
+</body>
+</html>
